@@ -1,26 +1,54 @@
-# Logs
+# dependencies
+
+node_modules/
+
+# build
+
+dist/
+build/
+coverage/
+
+# environment variables
+
+.env
+.env.*
+!.env.example
+
+# logs
+
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# OS files
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
 
-.env
+# IDE / Editor
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# TypeScript
+
+*.tsbuildinfo
+
+# local database files
+
+*.sqlite
+*.db
+
+# cache
+
+.cache/
+.temp/
+tmp/
+
+# upload files (nếu có)
+
+uploads/
