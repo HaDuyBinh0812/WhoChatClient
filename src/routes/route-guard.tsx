@@ -1,0 +1,16 @@
+import { useAuth } from "@/hooks/use-auth";
+import { Navigate, Outlet } from "react-router-dom";
+
+interface Props {
+    requireAuth?: boolean;
+}
+
+function RouteGuard({ requireAuth }: Props) {
+    const { user } = useAuth();
+    if (requireAuth && !user) return <Navigate to="/" replace />;
+    if (!requireAuth && user) return <Navigate to="/chat" replace />;
+    console.log(requireAuth);
+    return <Outlet />;
+}
+
+export default RouteGuard;
