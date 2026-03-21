@@ -3,7 +3,7 @@ import { useAuth } from "./hooks/use-auth";
 import AppRoutes from "./routes";
 import Logo from "./components/logo";
 import { Spinner } from "./components/ui/spinner";
-import { BrowserRouter, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { isAuthRoute } from "./routes/routes";
 
 function App() {
@@ -24,11 +24,7 @@ function App() {
         );
     }
 
-    return (
-        <BrowserRouter>
-            <AppRoutes />
-        </BrowserRouter>
-    );
+    return <AppRoutes />;
 }
 
 export default App;
