@@ -10,6 +10,7 @@ on:
             - "package.json"
             - "vite.config.ts"
             - "Dockerfile"
+            - "nginx/**"
             - ".github/workflows/client.yml"
 
     pull_request:
